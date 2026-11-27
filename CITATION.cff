@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "math: open problems, formalizations and proofs"
+authors:
+  - alias: rhetoricalrhet
+repository-code: "https://github.com/rhetoricalrhet/math"
+license: MIT
+type: software

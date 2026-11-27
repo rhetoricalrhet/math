@@ -1,0 +1,12 @@
+name = "math"
+defaultTargets = ["Math"]
+
+# Same Lean and Mathlib versions as Left To Solve (google-deepmind/formal-conjectures at 9097e2f),
+# so anything proved here also checks there.
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "Math"

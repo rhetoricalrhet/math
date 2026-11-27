@@ -1,0 +1,25 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No sorry in lean/
+        run: |
+          if grep -rnwE 'sorry|admit' --include='*.lean' lean/; then
+            echo "::error::lean/ must contain only complete proofs (found sorry/admit)"
+            exit 1
+          fi
+      - name: Build lean/
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: lean
+          use-mathlib-cache: true
