@@ -36,18 +36,23 @@ So `perm M = 2^n + 1`. ∎
 
 ## Lean progress
 
-In `lean/Math/OEIS/A000051.lean` (complete, no sorry):
+In `lean/Math/OEIS/A000051.lean` (complete, no sorry): **`permanent_luschnyMatrix` is proved**
+(axioms: propext, Classical.choice, Quot.sound).
 
 - [x] Step 1, `luschny_entry`: each entry is `2`, `1` or `0` as above.
-- [ ] Step 2: rewrite `permanent` as the two counts. Mathlib's permanent API is small (no
-      expansion along a row/column), so this goes through the definition
-      `Σ σ, Π i, M (σ i) i` directly.
-- [ ] Step 3a: the forced permutation (induction on `i`).
-- [ ] Step 3b: the `2^n` count. Plan: induction on `n` with a bijection
-      `{σ on n+2 points} ≃ {σ on n+1 points} × Bool` (does `n+1` start a new block or not),
-      or via `Equiv.Perm.decomposeFin`.
+- [x] Step 2, `prod_luschny_entry`: work with the transpose (`Matrix.permanent_transpose`), so a
+      term is `∏ i, M i (σ i)`; it equals `[Valid σ] + [Valid σ ∧ σ 0 = n]` where
+      `Valid σ := ∀ j, j ≤ σ j + 1`.
+- [x] Step 3a, `valid_corner_forced` + `sum_valid_corner`: the unique valid `σ` with `σ 0 = n`
+      is `(finRotate (n+1)).symm` (downward strong induction on `j`).
+- [x] Step 3b, `valid_decomposeFin_symm` + `sum_valid`: via `Equiv.Perm.decomposeFin`
+      (`σ ↔ (σ 0, e)`), `σ` is valid iff `e` is valid and `σ 0 ∈ {0, (e 0).succ}`; so the count
+      doubles at each step.
 
 ## Attempts
+
+- Transposing first (condition `j ≤ σ j + 1` instead of `σ i ≤ i + 1`) makes the special point
+  `0`, which matches Mathlib's `decomposeFin`; this worked on the first try, no failed routes.
 
 ## References
 
