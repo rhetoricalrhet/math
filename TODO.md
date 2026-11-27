@@ -19,7 +19,9 @@ What is outstanding and what is done. Update this file at the end of every piece
 - [ ] Add the `Model:` line on PR #3886 (and #3911, #3956 if not already done), by editing the
       PR description on GitHub.
 - [ ] **A008676 OEIS edit:** read `problems/oeis-a008676/OEIS-EDIT.md`, understand the proofs, and
-      submit the edit in your own words (OEIS AI policy forbids AI-written comment text).
+      submit it (copy-paste version at the top of that file). Sign-in tips: GitHub sign-in did
+      nothing and the emailed link signed in a different browser; next time copy the emailed
+      link into the normal browser, then open https://oeis.org/edit?seq=A008676 in that browser.
 - [ ] Add repo topics on GitHub: `lean4`, `mathematics`, `formal-verification`, `conjectures`.
 - [ ] Profile README (`rhetoricalrhet/rhetoricalrhet`): needs a one-line intro from me first.
 - [ ] Optional: save the Lean/Mathlib install as the cloud environment's setup script, so new
