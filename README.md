@@ -15,6 +15,7 @@ are credited per result in the table.
 | [OEIS A000330](problems/oeis-a000330/): every integer is a sum of three generalized square pyramidal numbers | Lean statement only | 📝 statement in review | [PR #3886](https://github.com/GuillaumeBAUD-coder/open-math-agents/pull/3886) · [page](https://lefttosolve.com/p/oeis-a000330) |
 | [OEIS A000051](problems/oeis-a000051/): 2^n + 1 is the permanent of a Toeplitz matrix | Known result formalized | ✅ fully Lean-checked · statement in review | [PR #3911](https://github.com/GuillaumeBAUD-coder/open-math-agents/pull/3911) · [page](https://lefttosolve.com/p/oeis-a000051) |
 | [OEIS A000225](problems/oeis-a000225/): a compositeness characterization of 2^n - 1 | Open conjecture | 🟡 partly in Lean (one direction proved) · statement in review | [PR #3956](https://github.com/GuillaumeBAUD-coder/open-math-agents/pull/3956) · [page](https://lefttosolve.com/p/oeis-a000225) |
+| [OEIS A008676](problems/oeis-a008676/): partitions into 3s and 5s; three conjectured comments | Open conjecture (open on OEIS; follows from known results) | ✍️ written proof · one comment corrected | [OEIS](https://oeis.org/A008676) |
 
 **Status:** 💡 idea · 🔍 exploring · 📝 statement in review · ✍️ written proof · 🟡 partly in Lean ·
 ✅ fully Lean-checked · ❌ disproved/counterexample
