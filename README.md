@@ -30,6 +30,7 @@ result is not the same as solving an open problem, and the table says which is w
 problems/<id>/        one folder per problem: README.md, NOTES.md, optional check.py
 templates/problem/    copy this to start a new problem
 lean/                 Lean 4 + Mathlib project; only complete proofs (CI fails on sorry)
+TODO.md               what is outstanding and what is done
 ```
 
 The layout is meant to grow: new kinds of work (papers, write-ups, other tools, other
