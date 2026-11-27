@@ -39,7 +39,7 @@ What is outstanding and what is done. Update this file at the end of every piece
 - 2026-11-27: Created this repo: README, status table, templates, Lean project, CI.
 - 2026-11-27: A000051 fully proved in Lean (`lean/Math/OEIS/A000051.lean`), CI green.
 - 2026-11-27: A000225 "if" direction proved in Lean (`lean/Math/OEIS/A000225.lean`); partial
-  result: Fermat-style coverings only work for powers of 2; no covering with period ≤ 90.
+  result: Fermat-style coverings only work for powers of 2; no covering with period ≤ 160.
 
 ## Resuming in a new session
 

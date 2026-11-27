@@ -72,8 +72,8 @@ Classical.choice, Quot.sound only.
 - m in 0..80 checked (Miller-Rabin): exactly 2^n - 1 except 3.
 - "only if" half: for every length L = 3..399 that is not a power of 2, a probable prime of the
   form 2^L - 1 - 2^j - 2^k was found.
-- Covering search over periods E = 2..90: no covering exists (so no counterexample of that kind
-  with period ≤ 90).
+- Covering search over periods E = 2..160: no covering exists (so no counterexample of that kind
+  with period ≤ 160).
 
 ## References
 
