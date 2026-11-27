@@ -56,8 +56,16 @@ The search was validated by recovering the Fermat covering at `L = 8, 16, 32`.
 
 ## Lean progress
 
-- [ ] "if" half: for `L = 2^t ≥ 8`, every `2^L - 1 - 2^j - 2^k` with `j < k < L` is not prime.
-- [ ] Small cases `m = 0, 1` and the failure at `m = 3`.
+File: `lean/Math/OEIS/A000225.lean` (namespace `Math.OEIS.A000225`), axioms: propext,
+Classical.choice, Quot.sound only.
+
+- [x] "if" half: for `L = 2^t ≥ 8`, every `2^L - 1 - 2^j - 2^k` with `j < k < L` is not prime
+  (`not_prime_of_lt`, via `two_pow_two_pow_eq_neg_one` and `fermat_dvd`, working in
+  `ZMod (2^(2^i) + 1)`; no Mathlib Fermat lemmas needed).
+- [x] Small cases `m = 0, 1` and the full reverse direction: `allComposite_of_pow`,
+  `allComposite_of_exists` (the ← direction of `main`).
+- [x] Failure at `m = 3`: `not_allComposite_three` (`j = 1`, `k = 3` gives `5`).
+- [ ] "only if" half (open).
 
 ## Attempts
 

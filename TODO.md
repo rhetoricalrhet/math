@@ -25,7 +25,9 @@ What is outstanding and what is done. Update this file at the end of every piece
 
 ## Ideas (not started)
 
-- Prove A000330 or A000225 (both open; research-level).
+- A000225 "only if" direction (open): look for a covering with period > 160, or a reason none
+  can exist; see `problems/oeis-a000225/NOTES.md`.
+- Prove A000330 (open; research-level).
 - Formalize more OEIS conjectures (`lefttosolve.com/api/problems?kind=unformalized`).
 - Check whether A000330's conjecture has a published proof or counterexample (128 and 262 had no
   representation with |index| ≤ 3000).
@@ -36,6 +38,8 @@ What is outstanding and what is done. Update this file at the end of every piece
 - 2026-11-27: Formalized and submitted A000330 (PR #3886), A000051 (PR #3911), A000225 (PR #3956).
 - 2026-11-27: Created this repo: README, status table, templates, Lean project, CI.
 - 2026-11-27: A000051 fully proved in Lean (`lean/Math/OEIS/A000051.lean`), CI green.
+- 2026-11-27: A000225 "if" direction proved in Lean (`lean/Math/OEIS/A000225.lean`); partial
+  result: Fermat-style coverings only work for powers of 2; no covering with period ≤ 90.
 
 ## Resuming in a new session
 
