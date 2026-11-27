@@ -1,6 +1,6 @@
 # math
 
-I loved math as a boy, but the culture around me didn't value it.
+I liked math as a boy, but the culture around me didn't value it.
 
 Formal statements, proofs and experiments on open conjectures in number theory, combinatorics
 and beyond. Lean 4 formalizations alongside reproducible search and verification scripts.
