@@ -54,12 +54,36 @@ n+8"). Checked numerically: the positive-part counts for n = 0..19 are
 
 ## Lean progress
 
-- [ ] Claim 1 (`lean/Math/OEIS/A008676.lean`).
-- [ ] Claim 2.
-- [ ] Claim 3 (both versions).
-- [ ] Optional: N(n) equals the power-series coefficient of 1/((1-x^3)(1-x^5)).
+All in `lean/Math/OEIS/A008676.lean` (namespace `Math.OEIS.A008676`), imported from
+`lean/Math.lean`; `lake build` passes and `#print axioms` gives only `propext`,
+`Classical.choice`, `Quot.sound` for every theorem below. `a n` is defined as the number of
+`(x, y)` in `range (n+1) ×ˢ range (n+1)` with `3x + 5y = n` (`mem_sol`: the box bound is automatic).
+
+- [x] Claim 1: `layman (n) : (a n : ℤ) = (2 * (n + 3) / 3 : ℕ) - (3 * (n + 3) / 5 : ℕ)` and
+  `akinari (n) : (a n : ℤ) = ((2 * n + 5) / 5 : ℕ) - ((n + 2) / 3 : ℕ)` (ℕ division = floor,
+  difference in ℤ). Via `a_add_fifteen : a (n + 15) = a n + 1` and `eq_a_of_add_fifteen`
+  (strong induction, base cases n < 15 by `decide`).
+- [x] Claim 2: `multisets (n) (hn : 1 ≤ n) : multisetCount n = a n` (counts (p, q, r) of -2, 3, 4
+  with p + q + r = n - 1 and 3q + 4r = 2p + 2), and the multiset statement itself:
+  `multisets_encard (n) (hn : 1 ≤ n)` says the set of `m : Multiset ℤ` with `card m = n - 1`, all
+  elements in {-2, 3, 4} and `m.sum = 2` has `encard = a n` (so it is also finite). Helpers:
+  `ofCounts`, `ofCounts_counts` (a multiset over {-2, 3, 4} is determined by its counts),
+  `ofCounts_injective`, `card_ofCounts`, `sum_ofCounts`, `mem_ofCounts`.
+- [x] Claim 3 (both versions): `triples_nonneg (n) : triplesNonneg n = a n`;
+  `triples_pos (n) (hn : 8 ≤ n) : triplesPos n = a (n - 8)`;
+  `triples_pos_small (n) (hn : n < 8) : triplesPos n = 0`;
+  `triples_pos_as_worded_fails : ¬ ∀ n, 1 ≤ n → triplesPos n = a n` (n = 3: 0 vs a 3 = 1).
+- [x] Optional: `mk_a_mul (R) [CommRing R] : (PowerSeries.mk fun n => (a n : R)) *
+  ((1 - X ^ 3) * (1 - X ^ 5)) = 1` and `coeff_inv (n) : coeff n (((1 - X ^ 3) * (1 - X ^ 5) :
+  ℚ⟦X⟧)⁻¹) = a n` (via `geom_mul`, `a_eq_card_antidiagonal`).
 
 ## Attempts
+
+- 2026-11-27, Lean: all three claims and the generating function formalized as above. Notes:
+  `omega` cannot by itself show `⌊2(n+18)/3⌋ - ⌊3(n+18)/5⌋ = ⌊2(n+3)/3⌋ - ⌊3(n+3)/5⌋ + 1` in ℤ
+  (it gives up), so the two shifts `+10` and `+9` are proved separately in ℕ first; `omega`
+  also ignores goals of the form `True ∧ P` left by `Prod.mk.injEq`, so `true_and`/`and_true`
+  are simplified first. `decide` handles the base cases n < 15 quickly.
 
 ## References
 

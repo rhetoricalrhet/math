@@ -3,7 +3,8 @@
 **Source:** [OEIS A008676](https://oeis.org/A008676): expansion of 1/((1-x^3)(1-x^5)), i.e. the
 number of ways to write n = 3a + 5b with a, b ≥ 0.
 **Type:** open conjecture (three conjectured comments on the OEIS page)
-**Status:** ✍️ written proof; Lean proof in progress
+**Status:** ✅ fully Lean-checked (`lean/Math/OEIS/A008676.lean`): all three claims, the corrected
+version of claim 3, and that `a(n)` is the coefficient of x^n in 1/((1-x^3)(1-x^5)).
 
 ## The three claims
 

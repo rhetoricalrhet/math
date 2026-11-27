@@ -18,6 +18,8 @@ What is outstanding and what is done. Update this file at the end of every piece
       README; tick it off above.
 - [ ] Add the `Model:` line on PR #3886 (and #3911, #3956 if not already done), by editing the
       PR description on GitHub.
+- [ ] **A008676 OEIS edit:** read `problems/oeis-a008676/OEIS-EDIT.md`, understand the proofs, and
+      submit the edit in your own words (OEIS AI policy forbids AI-written comment text).
 - [ ] Add repo topics on GitHub: `lean4`, `mathematics`, `formal-verification`, `conjectures`.
 - [ ] Profile README (`rhetoricalrhet/rhetoricalrhet`): needs a one-line intro from me first.
 - [ ] Optional: save the Lean/Mathlib install as the cloud environment's setup script, so new
@@ -40,6 +42,8 @@ What is outstanding and what is done. Update this file at the end of every piece
 - 2026-11-27: A000051 fully proved in Lean (`lean/Math/OEIS/A000051.lean`), CI green.
 - 2026-11-27: A000225 "if" direction proved in Lean (`lean/Math/OEIS/A000225.lean`); partial
   result: Fermat-style coverings only work for powers of 2; no covering with period ≤ 160.
+- 2026-11-27: A008676: proved Layman's formula and multiset comment, corrected Wiseman's comment
+  (positive triples give a(n-8)); all in Lean (`lean/Math/OEIS/A008676.lean`); OEIS edit drafted.
 
 ## Resuming in a new session
 

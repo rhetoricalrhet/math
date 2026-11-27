@@ -6,6 +6,13 @@ contributors to sign with their real name).
 
 Date format used by OEIS: `Nov 27 2026`.
 
+**OEIS AI policy** ([Use of AI for OEIS Submissions](https://oeis.org/wiki/Use_of_AI_for_OEIS_Submissions)):
+the human submitter is responsible for correctness and must be able to explain the result; it
+prohibits "using AI to generate the full text of comments", pasting AI-generated text into the
+editors' Pink Box discussions, and listing an AI tool as an author or co-author. So treat the text
+below as notes: understand each proof, then write the comments in your own words before
+submitting, and answer any editor questions yourself.
+
 ---
 
 ## 1. Layman's conjecture (move from %C to %F, with proof)
